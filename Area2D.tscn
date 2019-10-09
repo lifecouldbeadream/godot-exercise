@@ -1,18 +1,19 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://art/playerGrey_walk1.png" type="Texture" id=1]
-[ext_resource path="res://art/playerGrey_walk2.png" type="Texture" id=2]
-[ext_resource path="res://art/playerGrey_up1.png" type="Texture" id=3]
-[ext_resource path="res://art/playerGrey_up2.png" type="Texture" id=4]
+[ext_resource path="res://player.gd" type="Script" id=1]
+[ext_resource path="res://art/playerGrey_walk1.png" type="Texture" id=2]
+[ext_resource path="res://art/playerGrey_walk2.png" type="Texture" id=3]
+[ext_resource path="res://art/playerGrey_up1.png" type="Texture" id=4]
+[ext_resource path="res://art/playerGrey_up2.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "up",
 "speed": 5.0
@@ -23,11 +24,14 @@ radius = 27.8597
 height = 13.2878
 
 [node name="Area2D" type="Area2D"]
+script = ExtResource( 1 )
+speed = 4
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="player" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
-animation = "right"
+animation = "up"
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.524475, 0.699299 )
