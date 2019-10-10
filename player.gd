@@ -24,7 +24,6 @@ func _process(delta):
 		#$player.play()
 		get_node("AnimatedSprite").play();
 	else:
-		print("3")
 		$AnimatedSprite.stop()
 		
 	position += velocity * delta
