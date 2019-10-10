@@ -16,7 +16,6 @@ _global_script_class_icons={
 [application]
 
 config/name="godottest"
-run/main_scene="res://Area2D.tscn"
 config/icon="res://icon.png"
 
 [display]

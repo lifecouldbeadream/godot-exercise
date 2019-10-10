@@ -23,15 +23,17 @@ animations = [ {
 radius = 27.8597
 height = 13.2878
 
-[node name="Area2D" type="Area2D"]
+[node name="player" type="Area2D"]
 script = ExtResource( 1 )
-speed = 4
+__meta__ = {
+"_edit_group_": true
+}
+speed = 100
 
-[node name="player" type="AnimatedSprite" parent="."]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
-animation = "up"
-frame = 1
+animation = "right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.524475, 0.699299 )
