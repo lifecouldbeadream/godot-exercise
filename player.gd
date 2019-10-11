@@ -21,10 +21,10 @@ func _process(delta):
 		
 	if velocity.length() >0:
 		velocity = velocity.normalized() * speed
-		#$player.play()
 		get_node("AnimatedSprite").play();
 	else:
 		$AnimatedSprite.stop()
+		pass
 		
 	position += velocity * delta
 	position.x = clamp(position.x,0,screensize.x)
